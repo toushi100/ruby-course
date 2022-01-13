@@ -6,3 +6,7 @@ skill = {
 puts skill['rubdddy'] = true
 print skill["ruby"]
 print skill["dub"]
+puts 
+s = :Ahmed
+
+puts s.to_s
