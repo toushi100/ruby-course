@@ -1,20 +1,21 @@
-# x = "Ruby Rocks!"
-# x["Rocks!"] = ""
-# x+="is wonderful"
-# puts x
+text = "Hello Ruby World"
+hello_removed_text =  text[6..-1]
+puts hello_removed_text
+welcome_added = "Welcome to " + hello_removed_text
+puts welcome_added
+replace_welcome  = welcome_added.sub! "World","Ahmed"
+puts replace_welcome
+quotes_added = replace_welcome.insert(16,"\"")+"\""
+puts quotes_added
+index_of_y = quotes_added.index("y")+1
+comma_added = quotes_added.insert(index_of_y,",")
+puts comma_added
+tab_inserted = comma_added.insert(comma_added.index(',')+1,"\t")
+puts tab_inserted
+count = tab_inserted.length
+puts count
+space_replaced = tab_inserted.gsub(/[[:space:]]/,'-')
+puts space_replaced
 
-
-# r = "11Ahmez!"
-# x = [1,2,3,4,5,6,7,8]
-# t = [2,3]
-
-# # puts t = r[0,5].upcase()
-# # puts t = r[0,5].downcase()
-# # puts t.hash()
-# # puts t.upcase().hash()
-# # puts t.downcase().hash()
-# # puts t.reverse().hash()
-# print x[0..5]
-# print x[0,5]
 
 
