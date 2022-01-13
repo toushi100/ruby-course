@@ -10,7 +10,7 @@ puts quotes_added
 index_of_y = quotes_added.index("y")+1
 comma_added = quotes_added.insert(index_of_y,",")
 puts comma_added
-tab_inserted = comma_added.insert(comma_added.index(',')+1,"\t")
+tab_inserted = comma_added.insert(comma_added.index(',').next(),"\t")
 puts tab_inserted
 count = tab_inserted.length
 puts count
