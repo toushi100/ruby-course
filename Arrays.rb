@@ -61,10 +61,11 @@ puts
 # Write a Ruby program to find the largest value from a given array of integers of odd
 # length. The array length will be a least 1 using array APIs.
 r=[2,2,4,56,4,652,586,4,43]
-while r.max.even?
-    r.delete(r.max)
+if r.length.odd?
+    puts r.max
+else
+    puts "length of array is not odd"
 end
-puts r.max
 
 # Write a Ruby program to compute the sum of the numbers of a given array except the
 # number 17 and numbers that come immediately after a 17. Return 0 for an empty array
