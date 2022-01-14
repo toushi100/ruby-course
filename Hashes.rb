@@ -1,5 +1,5 @@
-Employees = {
-    10 =>{name:"Ahmed",salary:1000},
+emp = {
+    10=>{name:"Ahmed",salary:1000},
     21=>{name:"Mohamed",salary:2000},
     113=>{name:"Mahmoud",salary:5000},
     4=>{name:"Yassin",salary:3000},
@@ -20,4 +20,68 @@ Employees = {
     14=>{name:"Said",salary:nil},
     }
 
-puts Employees.dig(:name)
+
+
+
+
+
+
+
+
+
+
+
+
+puts "Employees\' names"
+emp.each_key do|i|
+    puts emp[i][:name]
+end
+
+
+puts "Employees\' IDs"
+emp.each_key do|i|
+    puts i
+end
+
+
+
+max = 0
+arr = []
+x = {}
+emp.each_key do|i|
+    unless emp[i][:salary] == nil
+        if emp[i][:salary] >= max
+            max = emp[i][:salary]
+        end
+    end
+end
+emp.each_key do|i|
+    if emp[i][:salary] == max
+        x ={name:emp[i][:name],salary: emp[i][:salary],id:i}
+        arr.append(x)
+    end
+  
+end
+puts
+print arr
+puts
+
+
+
+min = emp[10][:salary]
+emp.each_key do|i|
+    unless emp[i][:salary] == nil
+        if emp[i][:salary] <= min
+            min = emp[i][:salary]
+        end
+    end
+end
+y={}
+emp.each_key do|i|
+    if emp[i][:salary] == min
+        y[i] = emp[i]
+    end
+  
+end
+print y
+puts

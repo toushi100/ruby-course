@@ -102,8 +102,9 @@ end
 # BE
 # CF
 
-s1 = "ABC"
-s2 = "DEF"
+s1 = ["A","B","C"]
+s2 = ["D","E","F"]
+
 
 for i in 0..s1.length
     
