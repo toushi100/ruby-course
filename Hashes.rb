@@ -107,3 +107,19 @@ puts
 r = emp.to_a
 puts "#############################################################"
 print r.uniq{ emp.each_key do |h| emp[h][:name] end}
+
+
+
+z= [10, 20, 30, 40, 10, 10, 20]
+
+y={}
+
+z.each_with_index do|element,index|
+    if y.include?(element)
+            y[element]+= 1
+    else 
+            y[element]=1 
+    end
+end 
+puts
+print y 

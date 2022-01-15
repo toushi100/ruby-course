@@ -86,7 +86,7 @@ puts sum2
 
 # Write a Ruby program to check whether all items are identical in a given array using
 # array APIs
-arr = [1,1,1,2.1,1]
+arr = [1,1,1,1]
 if arr.uniq.count == 1
     puts "all items are identical in the array "
 else
@@ -107,6 +107,5 @@ s2 = ["D","E","F"]
 
 
 for i in 0..s1.length
-    
-    puts s1[i]+s2[i]
+     puts s1[i]+s2[i]
 end
