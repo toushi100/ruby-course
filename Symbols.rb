@@ -2,7 +2,7 @@ sym = :welcome_to_ruby
 puts sym.start_with?("wel","to","zzz") 
 puts sym.end_with?("by","zy") 
 puts sym.succ
-puts sym.to_s.gsub("_","")
+puts sym.to_s.gsub!(/[^0-9A-Za-z]/,"")
 puts sym.class
 puts sym.upcase()
 puts sym.downcase()
