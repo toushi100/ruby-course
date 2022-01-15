@@ -22,29 +22,21 @@ emp = {
 
 
 
-
-
-
-
-
-
-
-
-
-
+# Gets all employees name
 puts "Employees\' names"
+
 emp.each_key do|i|
     puts emp[i][:name]
 end
 
-
+# Gets all employee IDs ex:[10,21,113,...]
 puts "Employees\' IDs"
 emp.each_key do|i|
     puts i
 end
 
 
-
+# Gets employees with the highest salary in an array along their ID
 max = 0
 arr = []
 x = {}
@@ -67,7 +59,7 @@ print arr
 puts
 
 
-
+# Gets employees with lowest salary in a hash keeping their IDs
 min = emp[10][:salary]
 emp.each_key do|i|
     unless emp[i][:salary] == nil
@@ -85,3 +77,33 @@ emp.each_key do|i|
 end
 print y
 puts
+
+# Gets average salaries
+total = 0
+count = 0
+emp.each_key do|i|
+    unless emp[i][:salary] == nil
+        total += emp[i][:salary] 
+        count+=1
+        
+    end
+end
+puts
+print "AVERAGE : " ,total/count
+# Remove employees with nil salary.
+empe =emp.clone
+empe.each_key do|i|
+    if empe[i][:salary] == nil
+       empe.delete(i)
+    end
+end
+puts 
+puts
+p empe
+
+# Gets hash a new hash with uniq employees (remove duplicate)
+puts
+
+r = emp.to_a
+puts "#############################################################"
+print r.uniq{ emp.each_key do |h| emp[h][:name] end}
