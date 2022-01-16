@@ -106,7 +106,7 @@ s1 = ["A","B","C"]
 s2 = ["D","E","F"]
 
 
-for i in 0..s1.length
+for i in 0..s1.length-1
     puts
      print s1[i],"",s2[i]
 end
