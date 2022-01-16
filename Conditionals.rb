@@ -29,10 +29,10 @@ if (10 <=digit_1 and digit_1 <=99) and (10 <=digit_2 and digit_2 <=99)
         for j in digit_2
             if i == j
                 puts "true number appears in both"
+                break
                 
             end
         end
-        break
     end 
 end
 
