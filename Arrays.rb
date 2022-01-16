@@ -107,5 +107,6 @@ s2 = ["D","E","F"]
 
 
 for i in 0..s1.length
-     puts s1[i]+s2[i]
+    puts
+     print s1[i],"",s2[i]
 end
